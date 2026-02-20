@@ -1,5 +1,20 @@
+![micasaweb preview](micasaweb.png)
+
 1. Build the container or pull it from this repo's releases
+
 ```podman build -t micasaweb .```
-2. Run the container
-```podman run -d -p 7681:7681 -v /<some path>/micasa-data:/data --name micasa localhost/micasaweb``` 
-3. Contribute to the project to make it better
+
+2. Work out local permissions for the volume mount
+
+3. Run the container
+
+```
+podman run -d \
+-p 7681:7681 \
+-v /home/<somebody>/.local/share/micasa-data:/home/micasa/.local/share/micasa \
+--name micasa \
+localhost/micasaweb
+```
+4. Point your browser to http://<host>:7681
+
+5. Contribute to the project to make it better
