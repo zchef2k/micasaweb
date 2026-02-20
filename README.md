@@ -1,6 +1,6 @@
 ![micasaweb preview](micasaweb.png)
 
-1. Build the container or pull it from this repo's releases
+1. Build the image or pull it from this repo's releases
 
 ```podman build -t micasaweb .```
 
@@ -15,6 +15,6 @@ podman run -d \
 --name micasa \
 localhost/micasaweb
 ```
-4. Point your browser to http://<host>:7681
+4. Point your browser to ```http://<host>:7681```
 
 5. Contribute to the project to make it better
