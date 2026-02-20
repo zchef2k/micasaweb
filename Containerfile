@@ -2,7 +2,7 @@ FROM golang:latest AS builder
 
 RUN go install github.com/cpcloud/micasa/cmd/micasa@latest
 
-FROM fedora-minimal:latest
+FROM registry.fedoraproject.org/fedora-minimal:latest
 
 RUN microdnf install -y ttyd && \
     microdnf clean all
